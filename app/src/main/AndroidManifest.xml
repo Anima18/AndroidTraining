@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.chris.androidtraining">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".start_android.FirstActivity" android:label="FirstActivity" android:parentActivityName=".MainActivity"/>
+        <activity android:name=".start_android.SecondActivity" android:label="SecondActivity" android:parentActivityName=".start_android.FirstActivity"/>
+        <activity android:name=".support_different_devices.DeviceAdaptManagerActivity" android:label="DeviceAdaptManagerActivity"/>
+        <activity android:name=".support_different_devices.DifferentPlatformVersionsActivity" android:label="Supporting Different Languages"/>
+        <activity android:name=".support_different_devices.DifferentLanguagesActivity" android:label="Supporting Different Languages"/>
+        <activity android:name=".support_different_devices.DifferentScreenActivity" android:label="Supporting Different Screen"/>
+        <activity android:name=".dynamic_ui_with_fragments.DynamicUIFragmentActivity" android:label="Dynamic UI"/>
+    </application>
+
+</manifest>

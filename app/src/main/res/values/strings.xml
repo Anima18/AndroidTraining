@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Android培训</string>
+    <string name="hello_android">你好，android!</string>
+    <string name="current_version">当前系统版本:%1$d</string>
+</resources>
