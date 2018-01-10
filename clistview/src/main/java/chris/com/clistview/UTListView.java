@@ -7,7 +7,6 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.widget.ListView;
 
-
 import java.util.List;
 
 import chris.com.clistview.listview.ListViewEvent;
@@ -16,7 +15,6 @@ import chris.com.clistview.listview.adapter.UTBaseAdapter;
 import chris.com.clistview.listview.adapter.UTCABAdapter;
 import chris.com.clistview.listview.itemevent.ItemElementClickEvent;
 import chris.com.clistview.listview.itemevent.OnItemChoiceListener;
-import chris.com.clistview.listview.util.CommonUtil;
 
 
 /**

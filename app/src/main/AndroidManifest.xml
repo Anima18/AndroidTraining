@@ -24,6 +24,8 @@
         <activity android:name=".support_different_devices.DifferentLanguagesActivity" android:label="Supporting Different Languages"/>
         <activity android:name=".support_different_devices.DifferentScreenActivity" android:label="Supporting Different Screen"/>
         <activity android:name=".dynamic_ui_with_fragments.DynamicUIFragmentActivity" android:label="Dynamic UI"/>
+        <activity android:name=".save_data.SaveDataManagerActivity" android:label="Save Data"/>
+        <activity android:name=".save_data.SavePreferenceActivity" android:label="Save Preference"/>
     </application>
 
 </manifest>
