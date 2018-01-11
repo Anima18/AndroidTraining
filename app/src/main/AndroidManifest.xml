@@ -26,6 +26,8 @@
         <activity android:name=".dynamic_ui_with_fragments.DynamicUIFragmentActivity" android:label="Dynamic UI"/>
         <activity android:name=".save_data.SaveDataManagerActivity" android:label="Save Data"/>
         <activity android:name=".save_data.SavePreferenceActivity" android:label="Save Preference"/>
+        <activity android:name=".save_data.file.SaveFileDataManagerActivity" android:label="Save Files Data"/>
+        <activity android:name=".save_data.file.SaveInternalStorageActivity" android:label="Save Internal Files"/>
     </application>
 
 </manifest>

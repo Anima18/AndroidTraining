@@ -1,4 +1,4 @@
-package com.example.chris.androidtraining.save_data;
+package com.example.chris.androidtraining.save_data.file;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,7 +9,6 @@ import android.widget.Toast;
 
 import com.example.chris.androidtraining.ActivityClass;
 import com.example.chris.androidtraining.R;
-import com.example.chris.androidtraining.save_data.file.SaveFileDataManagerActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +19,7 @@ import chris.com.clistview.UTListView;
  * Created by Admin on 2018/1/7.
  */
 
-public class SaveDataManagerActivity extends AppCompatActivity {
+public class SaveFileDataManagerActivity extends AppCompatActivity {
     private List<ActivityClass> activityClassList = new ArrayList<>();
 
     @Override
@@ -37,9 +36,9 @@ public class SaveDataManagerActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 ActivityClass activityClass = activityClassList.get(i);
                 if(activityClass.getActivityClass() == null) {
-                    Toast.makeText(SaveDataManagerActivity.this, "没有实现", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SaveFileDataManagerActivity.this, "没有实现", Toast.LENGTH_SHORT).show();
                 }else {
-                    Intent intent = new Intent(SaveDataManagerActivity.this, activityClass.getActivityClass());
+                    Intent intent = new Intent(SaveFileDataManagerActivity.this, activityClass.getActivityClass());
                     startActivity(intent);
                 }
             }
@@ -48,8 +47,8 @@ public class SaveDataManagerActivity extends AppCompatActivity {
     }
 
     private void initData() {
-        activityClassList.add(new ActivityClass("Saving Key-Value Sets", SavePreferenceActivity.class));
-        activityClassList.add(new ActivityClass("Saving Files", SaveFileDataManagerActivity.class));
-        activityClassList.add(new ActivityClass("Saving Data in SQL Databases", null));
+        activityClassList.add(new ActivityClass("Internal Storage", SaveInternalStorageActivity.class));
+        activityClassList.add(new ActivityClass("External Storage Public Files", null));
+        activityClassList.add(new ActivityClass("External Storage Private Files", null));
     }
 }
