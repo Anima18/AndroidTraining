@@ -15,7 +15,7 @@ import com.example.chris.androidtraining.support_different_devices.DeviceAdaptMa
 import java.util.ArrayList;
 import java.util.List;
 
-import chris.com.clistview.UTListView;
+import chris.com.clistview.CListView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        UTListView listView = findViewById(R.id.listAct_lv);
+        CListView listView = findViewById(R.id.listAct_lv);
         initData();
         listView.setData(activityClassList);
 

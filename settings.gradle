@@ -1,1 +1,1 @@
-include ':app', ':clistview'
+include ':app'

@@ -15,7 +15,7 @@ import com.example.chris.androidtraining.R;
 import java.util.ArrayList;
 import java.util.List;
 
-import chris.com.clistview.UTListView;
+import chris.com.clistview.CListView;
 
 /**
  * Created by Admin on 2018/1/10.
@@ -25,7 +25,7 @@ public class SavePreferenceActivity extends AppCompatActivity {
 
     private String inputValue = "";
     private List<ActivityClass> data = new ArrayList<>();
-    private UTListView listView;
+    private CListView listView;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

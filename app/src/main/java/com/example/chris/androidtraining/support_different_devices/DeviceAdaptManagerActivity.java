@@ -13,7 +13,7 @@ import com.example.chris.androidtraining.R;
 import java.util.ArrayList;
 import java.util.List;
 
-import chris.com.clistview.UTListView;
+import chris.com.clistview.CListView;
 
 /**
  * Created by Admin on 2018/1/7.
@@ -27,7 +27,7 @@ public class DeviceAdaptManagerActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_device_adapter);
 
-        UTListView listView = findViewById(R.id.listAct_lv);
+        CListView listView = findViewById(R.id.listAct_lv);
         initData();
         listView.setData(activityClassList);
 

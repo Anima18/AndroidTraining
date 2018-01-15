@@ -13,7 +13,7 @@ import com.example.chris.androidtraining.R;
 import java.util.ArrayList;
 import java.util.List;
 
-import chris.com.clistview.UTListView;
+import chris.com.clistview.CListView;
 
 /**
  * Created by Admin on 2018/1/7.
@@ -27,7 +27,7 @@ public class SaveFileDataManagerActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_device_adapter);
 
-        UTListView listView = findViewById(R.id.listAct_lv);
+        CListView listView = findViewById(R.id.listAct_lv);
         initData();
         listView.setData(activityClassList);
 
@@ -48,7 +48,7 @@ public class SaveFileDataManagerActivity extends AppCompatActivity {
 
     private void initData() {
         activityClassList.add(new ActivityClass("Internal Storage", SaveInternalStorageActivity.class));
-        activityClassList.add(new ActivityClass("External Storage Public Files", null));
+        activityClassList.add(new ActivityClass("External Storage Public Files", SaveExternalPublicStorageActivity.class));
         activityClassList.add(new ActivityClass("External Storage Private Files", null));
     }
 }
