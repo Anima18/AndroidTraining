@@ -49,6 +49,6 @@ public class SaveFileDataManagerActivity extends AppCompatActivity {
     private void initData() {
         activityClassList.add(new ActivityClass("Internal Storage", SaveInternalStorageActivity.class));
         activityClassList.add(new ActivityClass("External Storage Public Files", SaveExternalPublicStorageActivity.class));
-        activityClassList.add(new ActivityClass("External Storage Private Files", null));
+        activityClassList.add(new ActivityClass("External Storage Private Files", SaveExternalPrivateStorageActivity.class));
     }
 }

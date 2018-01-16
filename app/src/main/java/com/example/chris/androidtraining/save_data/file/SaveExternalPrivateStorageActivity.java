@@ -19,14 +19,14 @@ import java.io.IOException;
 
 /**
  * Created by Admin on 2018/1/11.
- * 这些文件对与用户与其他app来说是public的，当用户卸载我们的app时，这些文件应该保留
+ * 这些文件完全被我们的app所私有，它们应该在app被卸载时删除。尽管由于存储在external storage
  */
 
-public class SaveExternalPublicStorageActivity extends AppCompatActivity {
+public class SaveExternalPrivateStorageActivity extends AppCompatActivity {
 
-    private static final String TAG = "SaveExternalPublic";
-    private static final String FILE_DIR = "android_training_ExternalPublic";
-    private static final String FILE_NAME = "ExternalPublicStorage.txt";
+    private static final String TAG = "SaveExternalPrivate";
+    private static final String FILE_DIR = "android_training_ExternalPrivate";
+    private static final String FILE_NAME = "ExternalPrivateStorage.txt";
 
     private EditText editText;
     private TextView textView;
@@ -110,8 +110,7 @@ public class SaveExternalPublicStorageActivity extends AppCompatActivity {
 
     public File getAlbumStorageDir() {
         // Get the directory for the user's public pictures directory.
-        File file = new File(Environment.getExternalStoragePublicDirectory(
-                Environment.DIRECTORY_PICTURES), FILE_DIR);
+        File file = new File(this.getExternalFilesDir(Environment.DIRECTORY_PICTURES), FILE_DIR);
         if (!file.mkdirs()) {
 
         }
