@@ -110,8 +110,9 @@ public class SaveExternalPublicStorageActivity extends AppCompatActivity {
 
     public File getAlbumStorageDir() {
         // Get the directory for the user's public pictures directory.
-        File file = new File(Environment.getExternalStoragePublicDirectory(
-                Environment.DIRECTORY_PICTURES), FILE_DIR);
+        /*File file = new File(Environment.getExternalStoragePublicDirectory(
+                Environment.DIRECTORY_PICTURES), FILE_DIR);*/
+        File file = new File(Environment.getExternalStorageDirectory(), FILE_DIR);
         if (!file.mkdirs()) {
 
         }

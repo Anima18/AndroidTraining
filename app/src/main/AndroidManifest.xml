@@ -35,6 +35,7 @@
         <activity android:name=".save_data.file.SaveInternalStorageActivity" android:label="Save Internal Files"/>
         <activity android:name=".save_data.file.SaveExternalPublicStorageActivity" android:label="Save External Public Files"/>
         <activity android:name=".save_data.file.SaveExternalPrivateStorageActivity" android:label="Save External Private Files"/>
+        <activity android:name=".save_data.db.DBActionActivity" android:label="Save DB data"/>
     </application>
 
 </manifest>

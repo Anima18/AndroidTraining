@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 import com.example.chris.androidtraining.ActivityClass;
 import com.example.chris.androidtraining.R;
+import com.example.chris.androidtraining.save_data.db.DBActionActivity;
 import com.example.chris.androidtraining.save_data.file.SaveFileDataManagerActivity;
 
 import java.util.ArrayList;
@@ -50,6 +51,6 @@ public class SaveDataManagerActivity extends AppCompatActivity {
     private void initData() {
         activityClassList.add(new ActivityClass("Saving Key-Value Sets", SavePreferenceActivity.class));
         activityClassList.add(new ActivityClass("Saving Files", SaveFileDataManagerActivity.class));
-        activityClassList.add(new ActivityClass("Saving Data in SQL Databases", null));
+        activityClassList.add(new ActivityClass("Saving Data in SQL Databases", DBActionActivity.class));
     }
 }
