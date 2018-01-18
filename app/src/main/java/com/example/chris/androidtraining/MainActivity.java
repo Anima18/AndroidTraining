@@ -8,6 +8,7 @@ import android.widget.AdapterView;
 import android.widget.Toast;
 
 import com.example.chris.androidtraining.dynamic_ui_with_fragments.DynamicUIFragmentActivity;
+import com.example.chris.androidtraining.intents.IntentManagerActivity;
 import com.example.chris.androidtraining.save_data.SaveDataManagerActivity;
 import com.example.chris.androidtraining.start_android.FirstActivity;
 import com.example.chris.androidtraining.support_different_devices.DeviceAdaptManagerActivity;
@@ -50,5 +51,6 @@ public class MainActivity extends AppCompatActivity {
         activityClassList.add(new ActivityClass("Supporting different devices", DeviceAdaptManagerActivity.class));
         activityClassList.add(new ActivityClass("Building a Dynamic UI with Fragments", DynamicUIFragmentActivity.class));
         activityClassList.add(new ActivityClass("Save data", SaveDataManagerActivity.class));
+        activityClassList.add(new ActivityClass("Send intents", IntentManagerActivity.class));
     }
 }

@@ -36,6 +36,8 @@
         <activity android:name=".save_data.file.SaveExternalPublicStorageActivity" android:label="Save External Public Files"/>
         <activity android:name=".save_data.file.SaveExternalPrivateStorageActivity" android:label="Save External Private Files"/>
         <activity android:name=".save_data.db.DBActionActivity" android:label="Save DB data"/>
+        <activity android:name=".intents.IntentManagerActivity" android:label="Send Intents"/>
+        <activity android:name=".intents.IntentToAnotherAppActivity" android:label="Sending the User to Another App"/>
     </application>
 
 </manifest>
