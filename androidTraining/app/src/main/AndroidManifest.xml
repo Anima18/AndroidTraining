@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.chris.androidtraining">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".start_android.FirstActivity" android:label="FirstActivity" android:parentActivityName=".MainActivity"/>
+        <activity android:name=".start_android.SecondActivity" android:label="SecondActivity" android:parentActivityName=".start_android.FirstActivity"/>
+        <activity android:name=".support_different_devices.DeviceAdaptManagerActivity" android:label="DeviceAdaptManagerActivity"/>
+        <activity android:name=".support_different_devices.DifferentPlatformVersionsActivity" android:label="Supporting Different Languages"/>
+        <activity android:name=".support_different_devices.DifferentLanguagesActivity" android:label="Supporting Different Languages"/>
+        <activity android:name=".support_different_devices.DifferentScreenActivity" android:label="Supporting Different Screen"/>
+        <activity android:name=".dynamic_ui_with_fragments.DynamicUIFragmentActivity" android:label="Dynamic UI"/>
+        <activity android:name=".save_data.SaveDataManagerActivity" android:label="Save Data"/>
+        <activity android:name=".save_data.SavePreferenceActivity" android:label="Save Preference"/>
+        <activity android:name=".save_data.file.SaveFileDataManagerActivity" android:label="Save Files Data"/>
+        <activity android:name=".save_data.file.SaveInternalStorageActivity" android:label="Save Internal Files"/>
+        <activity android:name=".save_data.file.SaveExternalPublicStorageActivity" android:label="Save External Public Files"/>
+        <activity android:name=".save_data.file.SaveExternalPrivateStorageActivity" android:label="Save External Private Files"/>
+        <activity android:name=".save_data.db.DBActionActivity" android:label="Save DB data"/>
+        <activity android:name=".intents.IntentManagerActivity" android:label="Send Intents"/>
+        <activity android:name=".intents.IntentToAnotherAppActivity" android:label="Sending the User to Another App"/>
+        <activity android:name=".intents.IntentResultActivity" android:label="Getting a Result from an Activity"/>
+        <activity android:name=".intents.IntentStartOtherApp" android:label="Allowing Other Apps to Start Your Activity"/>
+    </application>
+
+</manifest>
