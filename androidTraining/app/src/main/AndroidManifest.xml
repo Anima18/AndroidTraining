@@ -40,6 +40,10 @@
         <activity android:name=".intents.IntentToAnotherAppActivity" android:label="Sending the User to Another App"/>
         <activity android:name=".intents.IntentResultActivity" android:label="Getting a Result from an Activity"/>
         <activity android:name=".intents.IntentStartOtherApp" android:label="Allowing Other Apps to Start Your Activity"/>
+        <activity android:name=".sharing.SharingManagerActivity" android:label="Sharing content"/>
+        <activity android:name=".sharing.sharing_simple_data.SharingSimpleDataManagerActivity" android:label="Sharing Simple Data"/>
+        <activity android:name=".sharing.sharing_simple_data.SharingTextActivtity" android:label="Sharing text"/>
+        <activity android:name=".sharing.sharing_simple_data.SharingImageActivtity" android:label="Sharing image"/>
     </application>
 
 </manifest>

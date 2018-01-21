@@ -1,5 +1,7 @@
 package com.example.chris.androidtraining.save_data.file;
 
+import android.Manifest;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.annotation.Nullable;
@@ -8,8 +10,10 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.chris.androidtraining.R;
+import com.example.chris.androidtraining.util.PermissionUtil;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -23,7 +27,7 @@ import java.io.IOException;
  */
 
 public class SaveExternalPublicStorageActivity extends AppCompatActivity {
-
+    private final static int MY_PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION = 1;
     private static final String TAG = "SaveExternalPublic";
     private static final String FILE_DIR = "android_training_ExternalPublic";
     private static final String FILE_NAME = "ExternalPublicStorage.txt";
@@ -37,6 +41,8 @@ public class SaveExternalPublicStorageActivity extends AppCompatActivity {
         setContentView(R.layout.activity_save_internal);
         editText = findViewById(R.id.editText2);
         textView = findViewById(R.id.textView);
+
+        PermissionUtil.createPermission(this, MY_PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION, Manifest.permission.WRITE_EXTERNAL_STORAGE);
     }
 
     public void saveData(View view) {
@@ -89,25 +95,6 @@ public class SaveExternalPublicStorageActivity extends AppCompatActivity {
         }
     }
 
-    /* Checks if external storage is available for read and write */
-    public boolean isExternalStorageWritable() {
-        String state = Environment.getExternalStorageState();
-        if (Environment.MEDIA_MOUNTED.equals(state)) {
-            return true;
-        }
-        return false;
-    }
-
-    /* Checks if external storage is available to at least read */
-    public boolean isExternalStorageReadable() {
-        String state = Environment.getExternalStorageState();
-        if (Environment.MEDIA_MOUNTED.equals(state) ||
-                Environment.MEDIA_MOUNTED_READ_ONLY.equals(state)) {
-            return true;
-        }
-        return false;
-    }
-
     public File getAlbumStorageDir() {
         // Get the directory for the user's public pictures directory.
         /*File file = new File(Environment.getExternalStoragePublicDirectory(
@@ -117,5 +104,32 @@ public class SaveExternalPublicStorageActivity extends AppCompatActivity {
 
         }
         return file;
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode,
+                                           String permissions[], int[] grantResults) {
+        switch (requestCode) {
+            case MY_PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION: {
+                // If request is cancelled, the result arrays are empty.
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+
+                    // permission was granted, yay! Do the
+                    // contacts-related task you need to do.
+                    Toast.makeText(this, "ACCESS_FINE_LOCATION is OK", Toast.LENGTH_SHORT).show();
+
+                } else {
+
+                    // permission denied, boo! Disable the
+                    // functionality that depends on this permission.
+                    Toast.makeText(this, "ACCESS_FINE_LOCATION is denied", Toast.LENGTH_SHORT).show();
+                }
+                return;
+            }
+
+            // other 'case' lines to check for other
+            // permissions this app might request
+        }
     }
 }

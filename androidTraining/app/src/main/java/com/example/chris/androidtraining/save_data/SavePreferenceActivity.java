@@ -11,6 +11,7 @@ import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.example.chris.androidtraining.ActivityClass;
 import com.example.chris.androidtraining.R;
+import com.example.chris.androidtraining.util.SharedPrefsUtil;
 
 import java.util.ArrayList;
 import java.util.List;

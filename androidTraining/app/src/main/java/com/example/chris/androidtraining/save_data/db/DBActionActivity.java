@@ -1,19 +1,12 @@
 package com.example.chris.androidtraining.save_data.db;
 
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.text.InputType;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.afollestad.materialdialogs.DialogAction;
-import com.afollestad.materialdialogs.MaterialDialog;
-import com.example.chris.androidtraining.ActivityClass;
 import com.example.chris.androidtraining.R;
-import com.example.chris.androidtraining.save_data.SavePreferenceActivity;
-import com.example.chris.androidtraining.save_data.SharedPrefsUtil;
 import com.example.chris.androidtraining.save_data.db.database.DBManager;
 import com.example.chris.androidtraining.save_data.db.database.student.Student;
 
