@@ -7,8 +7,6 @@ import android.provider.MediaStore;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.ShareActionProvider;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -33,6 +31,7 @@ public class SharingImageActivtity extends AppCompatActivity {
 
         imageView = findViewById(R.id.imageView4);
     }
+/*
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -46,14 +45,19 @@ public class SharingImageActivtity extends AppCompatActivity {
             case R.id.menu_item_share2:
                 Intent shareIntent = new Intent();
                 shareIntent.setAction(Intent.ACTION_SEND);
-                shareIntent.putExtra(Intent.EXTRA_STREAM, uriToImage.toString());
-                shareIntent.setType("image/*");
+                //shareIntent.putExtra(Intent.EXTRA_STREAM, uriToImage.toString());
+                shareIntent.setDataAndType(
+                        uriToImage,
+                        getContentResolver().getType(uriToImage));
+                shareIntent.addFlags(
+                        Intent.FLAG_GRANT_READ_URI_PERMISSION);
                 startActivity(shareIntent);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
     }
+*/
 
 
     public void selectImage(View view) {
@@ -69,8 +73,18 @@ public class SharingImageActivtity extends AppCompatActivity {
             // Make sure the request was successful
             if (resultCode == RESULT_OK) {
                 // Get the URI that points to the selected contact
-                uriToImage = data.getData();
-                imageView.setImageURI(uriToImage);
+                Uri fileUri = data.getData();
+                imageView.setImageURI(fileUri);
+                /*String mimeType = getContentResolver().getType(fileUri);
+                try {
+                    File file = new File(new URI(fileUri.toString()));
+                    uriToImage = FileProvider.getUriForFile(
+                            SharingImageActivtity.this,
+                            "com.example.chris.androidtraining.fileprovider",
+                            file);
+                } catch (URISyntaxException e) {
+                    e.printStackTrace();
+                }*/
             }
         }
     }

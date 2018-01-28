@@ -4,12 +4,15 @@ import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    private static final int PICK_IMAGE_REQUEST = 0;
     private TextView textView;
     private ImageView imageView;
 
@@ -44,7 +47,26 @@ public class MainActivity extends AppCompatActivity {
         } else {
             // Handle other intents, such as being started from the home screen
         }
+    }
 
+    public void selectImage(View view) {
+        Intent albumIntent = new Intent(Intent.ACTION_PICK, null);
+        albumIntent.setDataAndType(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, "image/*");
+        startActivityForResult(albumIntent, PICK_IMAGE_REQUEST);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        // Check which request it is that we're responding to
+        if (requestCode == PICK_IMAGE_REQUEST) {
+            // Make sure the request was successful
+            if (resultCode == RESULT_OK) {
+                // Get the URI that points to the selected contact
+                Uri fileUri = data.getData();
+                imageView.setImageURI(fileUri);
+
+            }
+        }
     }
 
     public void calculateAdd(Intent intent) {
@@ -64,9 +86,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void handleSendImage(Intent intent) {
-        String imageUriStr = intent.getStringExtra(Intent.EXTRA_STREAM);
-        Uri imageUri = Uri.parse(imageUriStr);
-        imageView.setImageURI(imageUri);
+        Uri uriToImage = intent.getData();
+
+        imageView.setImageURI(uriToImage);
     }
 
     public void handleSendMultipleImages(Intent intent) {

@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 import com.example.chris.androidtraining.ActivityClass;
 import com.example.chris.androidtraining.R;
+import com.example.chris.androidtraining.sharing.sharing_file_data.SharingFileActivity;
 import com.example.chris.androidtraining.sharing.sharing_simple_data.SharingSimpleDataManagerActivity;
 
 import java.util.ArrayList;
@@ -49,7 +50,7 @@ public class SharingManagerActivity extends AppCompatActivity {
 
     private void initData() {
         activityClassList.add(new ActivityClass("Sharing Simple Data", SharingSimpleDataManagerActivity.class));
-        activityClassList.add(new ActivityClass("Sharing Files", null));
+        activityClassList.add(new ActivityClass("Sharing Files", SharingFileActivity.class));
         activityClassList.add(new ActivityClass("Sharing Files with NFC", null));
     }
 }
