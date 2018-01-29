@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 import com.example.chris.androidtraining.dynamic_ui_with_fragments.DynamicUIFragmentActivity;
 import com.example.chris.androidtraining.intents.IntentManagerActivity;
+import com.example.chris.androidtraining.multimedia.MultimediaManagerActivity;
 import com.example.chris.androidtraining.save_data.SaveDataManagerActivity;
 import com.example.chris.androidtraining.sharing.SharingManagerActivity;
 import com.example.chris.androidtraining.start_android.FirstActivity;
@@ -54,5 +55,6 @@ public class MainActivity extends AppCompatActivity {
         activityClassList.add(new ActivityClass("Save data", SaveDataManagerActivity.class));
         activityClassList.add(new ActivityClass("Send intents", IntentManagerActivity.class));
         activityClassList.add(new ActivityClass("Sharing content", SharingManagerActivity.class));
+        activityClassList.add(new ActivityClass("Building Apps with Multimedia", MultimediaManagerActivity.class));
     }
 }

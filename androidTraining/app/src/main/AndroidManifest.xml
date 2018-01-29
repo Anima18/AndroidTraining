@@ -57,6 +57,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".sharing.sharing_file_data.SharingFileActivity" android:label="Sharing File"/>
+        <activity android:name=".multimedia.MultimediaManagerActivity" android:label="Building Apps with Multimedia"/>
+        <activity android:name=".multimedia.CapturingPhotosManagerActivity" android:label="Capturing Photos"/>
 
         <provider
             android:name="android.support.v4.content.FileProvider"
