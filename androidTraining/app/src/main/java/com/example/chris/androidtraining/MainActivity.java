@@ -14,6 +14,7 @@ import com.example.chris.androidtraining.save_data.SaveDataManagerActivity;
 import com.example.chris.androidtraining.sharing.SharingManagerActivity;
 import com.example.chris.androidtraining.start_android.FirstActivity;
 import com.example.chris.androidtraining.support_different_devices.DeviceAdaptManagerActivity;
+import com.example.chris.androidtraining.window_manager.WindowManagerActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -56,5 +57,6 @@ public class MainActivity extends AppCompatActivity {
         activityClassList.add(new ActivityClass("Send intents", IntentManagerActivity.class));
         activityClassList.add(new ActivityClass("Sharing content", SharingManagerActivity.class));
         activityClassList.add(new ActivityClass("Building Apps with Multimedia", MultimediaManagerActivity.class));
+        activityClassList.add(new ActivityClass("Window manager", WindowManagerActivity.class));
     }
 }

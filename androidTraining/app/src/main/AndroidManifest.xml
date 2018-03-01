@@ -59,6 +59,8 @@
         <activity android:name=".sharing.sharing_file_data.SharingFileActivity" android:label="Sharing File"/>
         <activity android:name=".multimedia.MultimediaManagerActivity" android:label="Building Apps with Multimedia"/>
         <activity android:name=".multimedia.CapturingPhotosManagerActivity" android:label="Capturing Photos"/>
+        <activity android:name=".window_manager.WindowManagerActivity" android:label="Window Manager"/>
+        <activity android:name=".window_manager.ViewLifeCycleActivity" android:label="View life cycle"/>
 
         <provider
             android:name="android.support.v4.content.FileProvider"
